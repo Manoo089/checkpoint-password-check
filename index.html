@@ -15,26 +15,34 @@
     </header>
 
     <main>
-        <input type="password" id="input1" />
-        <input type="password" id="input2" />
+        <form action="" id="input-fields">
+            <input type="password" id="password" />
+            <input type="password" id="password-confirm" />
+        </form>
 
         <button id="toggle_button"></button>
 
         <div class="checks__container">
             <ul>
                 <li>
-                    Passwords are equal <input type="checkbox" name="checkboxes" />
+                    Passwords are equal
+                    <span class="status" id="is-equal">❌</span>
                 </li>
                 <li>
-                    Lower Case Letters <input type="checkbox" name="checkboxes" />
+                    Lower Case Letters
+                    <span class="status" id="status-lower-case">❌</span>
                 </li>
                 <li>
-                    Upper Case Letters <input type="checkbox" name="checkboxes" />
+                    Upper Case Letters
+                    <span class="status" id="status-upper-case">❌</span>
                 </li>
-                <li>Contains Numbers <input type="checkbox" name="checkboxes" /></li>
+                <li>
+                    Contains Numbers
+                    <span class="status" id="status-number-case">❌</span>
+                </li>
                 <li>
                     At least 10 characters long
-                    <input type="checkbox" name="checkboxes" />
+                    <span class="status" id="status-characters-case">❌</span>
                 </li>
             </ul>
         </div>
