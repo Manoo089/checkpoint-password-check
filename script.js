@@ -39,11 +39,6 @@ class PasswordChecker {
         this.render();
     };
 
-    renderToggleButtonText = () => {
-        document.querySelector("#toggle_button").innerHTML = this.state.buttonText;
-        this.render();
-    };
-
     render = () => {
         document.querySelector("#toggle_button").innerHTML = this.state.buttonText;
     };
