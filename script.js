@@ -2,7 +2,7 @@ class PasswordChecker {
     state = {
         input1: "",
         input2: "",
-        button: "show",
+        buttonText: "Show Password",
     };
 
     constructor() {
@@ -17,6 +17,9 @@ class PasswordChecker {
         document
             .querySelector("#input2")
             .addEventListener("input", this.handleInputEvent);
+        document
+            .querySelector("#toggle_button")
+            .addEventListener("click", this.handleToggleButtonText);
     };
     handleInputEvent = () => {
         const inputFirstElement = document.querySelector("#input1");
@@ -27,7 +30,23 @@ class PasswordChecker {
         this.state.input2 = inputSecondElementValue;
     };
 
-    render = () => {};
+    handleToggleButtonText = () => {
+        if (this.state.buttonText === "Show Password") {
+            this.state.buttonText = "Hide Password";
+        } else {
+            this.state.buttonText = "Show Password";
+        }
+        this.render();
+    };
+
+    renderToggleButtonText = () => {
+        document.querySelector("#toggle_button").innerHTML = this.state.buttonText;
+        this.render();
+    };
+
+    render = () => {
+        document.querySelector("#toggle_button").innerHTML = this.state.buttonText;
+    };
 }
 
 const app = new PasswordChecker();
