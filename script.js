@@ -33,6 +33,7 @@ class PasswordChecker {
         this.checkToLowerCase();
         this.checkToUpperCase();
         this.checkToNumbers();
+        this.checkToCharacters();
     };
 
     handleToggleShowHide = () => {
@@ -102,11 +103,15 @@ class PasswordChecker {
 
     checkToCharacters = () => {
         if (this.state.password.length >= 10) {
-            const statusNumberCase = document.querySelector("#status-number-case");
-            statusNumberCase.innerText = "✅";
+            const statusCharacterCase = document.querySelector(
+                "#status-characters-case"
+            );
+            statusCharacterCase.innerText = "✅";
         } else {
-            const statusNumberCase = document.querySelector("#status-number-case");
-            statusNumberCase.innerText = "❌";
+            const statusCharacterCase = document.querySelector(
+                "#status-characters-case"
+            );
+            statusCharacterCase.innerText = "❌";
         }
     };
 
