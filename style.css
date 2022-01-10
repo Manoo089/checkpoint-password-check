@@ -23,6 +23,8 @@ h5,
 h6 {
     font-family: "Lobster", cursive;
     color: white;
+    text-shadow: 3px 3px black;
+    font-size: 5rem;
 }
 
 input,
