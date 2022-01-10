@@ -19,7 +19,7 @@ class PasswordChecker {
             .addEventListener("input", this.handleInputEvent);
         document
             .querySelector("#toggle_button")
-            .addEventListener("click", this.handleToggleButtonText);
+            .addEventListener("click", this.handleToggleShowHide);
     };
     handleInputEvent = () => {
         const inputFirstElement = document.querySelector("#input1");
@@ -28,27 +28,25 @@ class PasswordChecker {
         const inputSecondElementValue = inputSecondElement.value;
         this.state.input1 = inputFirstElementValue;
         this.state.input2 = inputSecondElementValue;
-        console.log(inputFirstElementValue);
     };
 
-    handleToggleButtonText = () => {
+    handleToggleShowHide = () => {
+        const inputFirstElement = document.querySelector("#input1");
+        const inputSecondElement = document.querySelector("#input2");
+
         if (this.state.buttonText === "Show Password") {
             this.state.buttonText = "Hide Password";
+            inputFirstElement.setAttribute("type", "text");
+            inputSecondElement.setAttribute("type", "text");
         } else {
             this.state.buttonText = "Show Password";
+            inputFirstElement.setAttribute("type", "password");
+            inputSecondElement.setAttribute("type", "password");
         }
         this.render();
     };
 
-    renderToggleButtonText = () => {
-        const button = (document.querySelector("#toggle_button").innerHTML =
-            this.state.buttonText);
-        this.render();
-    };
-
     render = () => {
-        const buttonContainer = document.querySelector(".button-container");
-
         document.querySelector("#toggle_button").innerHTML = this.state.buttonText;
     };
 }
