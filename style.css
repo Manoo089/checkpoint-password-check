@@ -30,4 +30,16 @@ h6 {
 input,
 button {
     font-family: "Open Sans", sans-serif;
+    border: 2px solid black;
+    border-radius: 2px;
+    padding: 0.25rem;
+}
+
+button {
+    background-color: black;
+    color: white;
+}
+
+.checks__container {
+    font-size: 1.5rem;
 }
