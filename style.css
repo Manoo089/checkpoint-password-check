@@ -8,6 +8,7 @@
 
 html {
     font-family: "Open Sans", sans-serif;
+    color: black;
 }
 
 body {
@@ -21,6 +22,7 @@ h4,
 h5,
 h6 {
     font-family: "Lobster", cursive;
+    color: white;
 }
 
 input,
