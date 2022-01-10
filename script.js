@@ -36,8 +36,8 @@ class PasswordChecker {
     };
 
     handleToggleShowHide = () => {
-        const inputFirstElement = document.querySelector("#input1");
-        const inputSecondElement = document.querySelector("#input2");
+        const inputFirstElement = document.querySelector("#password");
+        const inputSecondElement = document.querySelector("#password-confirm");
 
         if (this.state.buttonText === "Show Password") {
             this.state.buttonText = "Hide Password";
