@@ -6,7 +6,7 @@ class PasswordChecker {
     };
 
     constructor() {
-        this.initEventHandlers;
+        this.initEventHandlers();
         this.render();
     }
 
@@ -28,6 +28,7 @@ class PasswordChecker {
         const inputSecondElementValue = inputSecondElement.value;
         this.state.input1 = inputFirstElementValue;
         this.state.input2 = inputSecondElementValue;
+        console.log(inputFirstElementValue);
     };
 
     handleToggleButtonText = () => {
@@ -39,7 +40,15 @@ class PasswordChecker {
         this.render();
     };
 
+    renderToggleButtonText = () => {
+        const button = (document.querySelector("#toggle_button").innerHTML =
+            this.state.buttonText);
+        this.render();
+    };
+
     render = () => {
+        const buttonContainer = document.querySelector(".button-container");
+
         document.querySelector("#toggle_button").innerHTML = this.state.buttonText;
     };
 }
