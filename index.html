@@ -10,6 +10,35 @@
 </head>
 
 <body>
+    <header>
+        <h1>Password Check</h1>
+    </header>
+
+    <main>
+        <input type="password" id="#input1" />
+        <input type="password" id="#input2" />
+        <button id="#toggle_button">Show Passwords</button>
+
+        <div class="checks__container">
+            <ul>
+                <li>
+                    Passwords are equal <input type="checkbox" name="checkboxes" />
+                </li>
+                <li>
+                    Lower Case Letters <input type="checkbox" name="checkboxes" />
+                </li>
+                <li>
+                    Upper Case Letters <input type="checkbox" name="checkboxes" />
+                </li>
+                <li>Contains Numbers <input type="checkbox" name="checkboxes" /></li>
+                <li>
+                    At least 10 characters long
+                    <input type="checkbox" name="checkboxes" />
+                </li>
+            </ul>
+        </div>
+    </main>
+
     <script src="script.js"></script>
 </body>
 
