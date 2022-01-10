@@ -18,14 +18,16 @@
     </header>
 
     <main>
-        <form action="" id="input-fields">
-            <input type="password" id="password" />
-            <input type="password" id="password-confirm" />
-        </form>
-        <button id="toggle_button"></button>
+        <div class="inputs__container">
+            <form action="" class="form" id="input-fields">
+                <input type="password" id="password" />
+                <input type="password" id="password-confirm" />
+            </form>
+            <button id="toggle_button"></button>
+        </div>
 
         <div class="checks__container">
-            <ul>
+            <ul class="checks__list">
                 <li>
                     Passwords are equal
                     <span class="status" id="is-equal">❌</span>
