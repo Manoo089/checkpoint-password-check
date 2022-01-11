@@ -13,31 +13,26 @@ toggleButton.addEventListener("click", toggleShowHide);
 passwordForm.addEventListener("input", function() {
     if (checkIsEqual(password, passwordConfirm)) {
         statusIsEqual.textContent = "✅";
+
+        if (checkIsLowerCase(password)) {
+            statusLowerCase.textContent = "✅";
+        }
+
+        if (checkIsUpperCase(password)) {
+            statusUpperCase.textContent = "✅";
+        }
+
+        if (checkIsNumber(password)) {
+            statusNumberCase.textContent = "✅";
+        }
+        if (checkCharacters(password)) {
+            statusCharactersCase.textContent = "✅";
+        }
     } else {
         statusIsEqual.textContent = "❌";
-    }
-
-    if (checkIsLowerCase(password)) {
-        statusLowerCase.textContent = "✅";
-    } else {
         statusLowerCase.textContent = "❌";
-    }
-
-    if (checkIsUpperCase(password)) {
-        statusUpperCase.textContent = "✅";
-    } else {
         statusUpperCase.textContent = "❌";
-    }
-
-    if (checkIsNumber(password)) {
-        statusNumberCase.textContent = "✅";
-    } else {
         statusNumberCase.textContent = "❌";
-    }
-
-    if (checkCharacters(password)) {
-        statusCharactersCase.textContent = "✅";
-    } else {
         statusCharactersCase.textContent = "❌";
     }
 });
