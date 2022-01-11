@@ -18,41 +18,27 @@
     </header>
 
     <main>
-        <div class="inputs__container">
-            <form action="" class="form" id="input-fields">
+        <section class="inputs">
+            <form class="form" id="form">
                 <input type="password" id="password" />
                 <input type="password" id="password-confirm" />
             </form>
-            <button id="toggle_button"></button>
-        </div>
-
-        <div class="checks__container">
+            <button id="toggle-button">Show Password</button>
+        </section>
+        <section class="checks">
             <ul class="checks__list">
+                <li>Passwords are equal<span id="status-is-equal">❌</span></li>
+                <li>Lower Case Letters<span id="status-lower-case">❌</span></li>
+                <li>Upper Case Letters<span id="status-upper-case">❌</span></li>
+                <li>Contains Numbers<span id="status-number-case">❌</span></li>
                 <li>
-                    Passwords are equal
-                    <span class="status" id="is-equal">❌</span>
-                </li>
-                <li>
-                    Lower Case Letters
-                    <span class="status" id="status-lower-case">❌</span>
-                </li>
-                <li>
-                    Upper Case Letters
-                    <span class="status" id="status-upper-case">❌</span>
-                </li>
-                <li>
-                    Contains Numbers
-                    <span class="status" id="status-number-case">❌</span>
-                </li>
-                <li>
-                    At least 10 characters long
-                    <span class="status" id="status-characters-case">❌</span>
-                </li>
-            </ul>
-        </div>
+                    At least 10 characters Long<span id="status-characters-case">❌</span
+            >
+          </li>
+        </ul>
+      </section>
     </main>
 
     <script src="script.js"></script>
-</body>
-
+  </body>
 </html>
