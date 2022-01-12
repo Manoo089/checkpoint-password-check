@@ -19,11 +19,11 @@
 
     <main>
         <section class="inputs">
-            <form class="form" id="form">
+            <form class="form" id="form" onsubmit="return false;">
                 <input type="password" id="password" placeholder="Type your Password" />
                 <input type="password" id="password-confirm" placeholder="...and again" />
+                <button id="toggle-button">Show Password</button>
             </form>
-            <button id="toggle-button">Show Password</button>
         </section>
         <section class="checks">
             <ul class="checks__list">

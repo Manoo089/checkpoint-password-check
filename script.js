@@ -25,6 +25,7 @@ passwordForm.addEventListener("input", function() {
         if (checkIsNumber(password.value)) {
             statusNumberCase.textContent = "✅";
         }
+
         if (checkCharacters(password.value)) {
             statusCharactersCase.textContent = "✅";
         }
