@@ -14,18 +14,18 @@ passwordForm.addEventListener("input", function() {
     if (checkIsEqual(password, passwordConfirm)) {
         statusIsEqual.textContent = "✅";
 
-        if (checkIsLowerCase(password)) {
+        if (checkIsLowerCase(password.value)) {
             statusLowerCase.textContent = "✅";
         }
 
-        if (checkIsUpperCase(password)) {
+        if (checkIsUpperCase(password.value)) {
             statusUpperCase.textContent = "✅";
         }
 
-        if (checkIsNumber(password)) {
+        if (checkIsNumber(password.value)) {
             statusNumberCase.textContent = "✅";
         }
-        if (checkCharacters(password)) {
+        if (checkCharacters(password.value)) {
             statusCharactersCase.textContent = "✅";
         }
     } else {
@@ -48,24 +48,20 @@ function checkIsEqual(password, passwordConfirm) {
     }
 }
 
-function checkIsLowerCase(ele) {
-    return /[a-z]/.test(ele.value);
+function checkIsLowerCase(str) {
+    return /[a-z]/.test(str);
 }
 
-function checkIsUpperCase(ele) {
-    return /[A-Z]/.test(ele.value);
+function checkIsUpperCase(str) {
+    return /[A-Z]/.test(str);
 }
 
-function checkIsNumber(ele) {
-    return /[\d+]/.test(ele.value);
+function checkIsNumber(str) {
+    return /[\d+]/.test(str);
 }
 
-function checkCharacters(ele) {
-    if (ele.value.length >= 10) {
-        return true;
-    } else {
-        return false;
-    }
+function checkCharacters(str) {
+    return str.length >= 10;
 }
 
 function toggleShowHide() {
