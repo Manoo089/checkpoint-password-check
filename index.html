@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Lobster&family=Open+Sans:wght@300;400;600;700&display=swap" rel="stylesheet" />
+    <title>Password Check</title>
+</head>
+
+<body>
+    <header>
+        <h1>Password Check</h1>
+    </header>
+
+    <main>
+        <section class="inputs">
+            <form class="form" id="form" onsubmit="return false;">
+                <input type="password" id="password" placeholder="Type your Password" />
+                <input type="password" id="password-confirm" placeholder="...and again" />
+                <button id="toggle-button">Show Password</button>
+            </form>
+        </section>
+        <section class="checks">
+            <ul class="checks__list">
+                <li>Passwords are equal<span id="status-is-equal">❌</span></li>
+                <li>Lower Case Letters<span id="status-lower-case">❌</span></li>
+                <li>Upper Case Letters<span id="status-upper-case">❌</span></li>
+                <li>Contains Numbers<span id="status-number-case">❌</span></li>
+                <li>
+                    At least 10 characters Long<span id="status-characters-case">❌</span
+            >
+          </li>
+        </ul>
+      </section>
+    </main>
+
+    <script src="script.js"></script>
+  </body>
+</html>
